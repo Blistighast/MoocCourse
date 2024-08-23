@@ -27,3 +27,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/mooc-java-programming-i/part01-Part01_16.SecondsInADay/target/
+/mooc-java-programming-i/part01-Part01_17.SumOfTwoNumbers/target/
+/mooc-java-programming-i/part01-Part01_18.SumOfThreeNumbers/target/
+/mooc-java-programming-i/part01-Part01_19.AdditionFormula/target/
+/mooc-java-programming-i/part01-Part01_20.MultiplicationFormula/target/
+/mooc-java-programming-i/part01-Part01_21.AverageOfTwoNumbers/target/
+/mooc-java-programming-i/part01-Part01_22.AverageOfThreeNumbers/target/
+/mooc-java-programming-i/part01-Part01_23.SimpleCalculator/target/
