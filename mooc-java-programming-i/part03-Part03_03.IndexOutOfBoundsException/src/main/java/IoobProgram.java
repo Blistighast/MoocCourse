@@ -13,6 +13,8 @@ public class IoobProgram {
         lines.add("give up most of his life for physics and research of many hypothesis. But, this is why");
         lines.add("you and I have even heard of the quantum theory and atomic structures. Bohr came");
         lines.add("up with his quantum theory while studying...");
+        
+        System.out.println(lines.get(10));
 
         for (String line : lines) {
             System.out.println(line);
