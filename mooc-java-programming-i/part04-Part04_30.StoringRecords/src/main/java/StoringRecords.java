@@ -24,7 +24,27 @@ public class StoringRecords {
         ArrayList<Person> persons = new ArrayList<>();
 
         // Write here the code for reading from file
+        
+        try (Scanner fileSearch = new Scanner(Paths.get(file))) {
+            
+            while (fileSearch.hasNextLine()) {
+                String line = fileSearch.nextLine();
+                
+                String[] person = line.split(",");
+                String name = person[0];
+                int age = Integer.valueOf(person[1]);
+                
+                persons.add(new Person(name, age));
+            }
+
+            
+        } catch (Exception e) {
+//            System.out.println(e);
+            System.out.println("Reading the file " + file + " failed.");
+        }
+
         // and printing the read records
+        
         return persons;
 
     }
