@@ -33,9 +33,7 @@ public class PersonalDetails {
         
         System.out.println("Longest name: " +longestName);
         System.out.println("Average of the birth years: " + average);
-        
-        
-        //test
+
 
     }
 }
