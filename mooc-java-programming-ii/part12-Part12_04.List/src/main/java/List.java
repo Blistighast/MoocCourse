@@ -52,5 +52,14 @@ public class List<T> {
         }
     }
     
+    public T value(int index) {
+        if (index < 0 || index >= firstFreeIndex) {
+            throw new ArrayIndexOutOfBoundsException("Index " + index + " outside of [0, " + firstFreeIndex + "]");
+        }
+        return values[index];
+    }
     
+    public int size() {
+        return firstFreeIndex;
+    }
 }
