@@ -17,15 +17,52 @@ public class MagicSquare {
 
     // implement these three methods
     public ArrayList<Integer> sumsOfRows() {
-        return new ArrayList<>();
+        ArrayList<Integer> rowSums = new ArrayList<>();
+        for (int row = 0; row < square.length; row++) {
+            int sum = 0;
+            for (int col = 0; col < square[row].length; col++) {
+                sum += square[row][col];
+            }
+            rowSums.add(sum);
+        }
+        return rowSums;
     }
 
     public ArrayList<Integer> sumsOfColumns() {
-        return new ArrayList<>();
+        ArrayList<Integer> colSum = new ArrayList<>();
+        for (int i = 0; i < square.length; i++) {
+            colSum.add(0);
+        }
+        
+        for (int row = 0; row < square.length; row++) {
+            for (int col = 0; col < square[row].length; col++) {
+                
+                colSum.set(col, colSum.get(col) + square[row][col]);
+            }
+        }
+        return colSum;
     }
 
     public ArrayList<Integer> sumsOfDiagonals() {
-        return new ArrayList<>();
+        ArrayList<Integer> diaSum = new ArrayList<>();
+        diaSum.add(0);
+        diaSum.add(0);
+        
+        //get forward diag
+        for (int row = 0; row < square.length; row++) {
+            for (int col = 0; col < square[row].length; col++) {
+                if (col == row) diaSum.set(0, diaSum.get(0) + square[row][col]);
+            }
+        }
+        
+        //get reverse diag
+        int col = square.length - 1;
+        for (int row = 0; row < square.length; row++) {
+            diaSum.set(1, diaSum.get(1) + square[row][col]);
+            col--;
+        }
+        
+        return diaSum;
     }
 
     // ready-made helper methods -- don't touch these
