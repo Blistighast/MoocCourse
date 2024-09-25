@@ -10,6 +10,7 @@ public class HurraaSovellus extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+//        AudioClip sound = new AudioClip("file:Applause-Yannick_Lemieux.wav");
         BorderPane pane = new BorderPane();
 
         Button nappi = new Button("Hurraa!");
