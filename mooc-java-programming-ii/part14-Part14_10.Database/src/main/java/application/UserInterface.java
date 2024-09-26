@@ -30,6 +30,32 @@ public class UserInterface {
             }
 
             // implement the functionality here
+            if (command.equals("1")) {
+                System.out.println("Listing the database contents");
+                System.out.println(database.list());
+            }
+            
+            if (command.equals("2")) {
+                System.out.println("Adding a new todo");
+                System.out.println("Enter name");
+                String name = scanner.nextLine();
+                System.out.println("Enter description");
+                String desc = scanner.nextLine();
+                
+                database.add(new Todo(name, desc, false));
+            }
+            
+            if (command.equals("3")) {
+                System.out.println("Which todo should be marked as done (give the id)?");
+                int id = Integer.valueOf(scanner.nextLine());
+                database.markAsDone(id);
+            }
+            
+            if (command.equals("4")) {
+                System.out.println("Which todo should be removed (give the id)?");
+                int id = Integer.valueOf(scanner.nextLine());
+                database.remove(id);
+            }
         }
 
         System.out.println("Thank you!");
